@@ -1,0 +1,47 @@
+Presentacion
+========================================================
+author: Javier Esteban
+date: 
+autosize: true
+css:custom.css
+First Slide
+========================================================
+type:exclaim
+
+<code>
+1. Bullet 1
+2. Bullet 2
+3. Bullet 3
+</code>
+Slide With Code
+========================================================
+First colum
+```{r}
+summary(cars)
+```
+***
+Second colum 
+```{r}
+summary(cars)
+```
+Slide With Plot
+========================================================
+
+```{r, include=FALSE}
+library(plotly)
+x<-c(1:20)
+y<-x*x
+data<-data.frame(x,y)
+p=plot_ly(data,x=~x,y=~y,name="cuadratic",type="scatter")
+htmlwidgets::saveWidget(p,'plotly.html')
+```
+<style>
+  .p_iframe iframe {
+    width:90%;
+    height:576px;
+}
+</style>
+
+<div class="p_iframe">
+<iframe frameborder="0" seamless='seamless' scrolling=no src="plotly.html"></iframe>
+</div>
